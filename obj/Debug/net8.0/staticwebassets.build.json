@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "7ZjvInIzjGUJkRwJcJYBnCoKa+sNTi/Tlmyg+TL5Voc=",
+  "Source": "GameRouletteBackend",
+  "BasePath": "_content/GameRouletteBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "GameRouletteBackend/wwwroot",
+      "Source": "GameRouletteBackend",
+      "ContentRoot": "/Users/USER/Desktop/Projects/unlink/backend/wwwroot/",
+      "BasePath": "_content/GameRouletteBackend",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
