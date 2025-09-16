@@ -253,3 +253,4 @@
 /Users/USER/Desktop/Projects/unlink/backend/obj/Debug/net8.0/GameRouletteBackend.pdb
 /Users/USER/Desktop/Projects/unlink/backend/obj/Debug/net8.0/GameRouletteBackend.genruntimeconfig.cache
 /Users/USER/Desktop/Projects/unlink/backend/obj/Debug/net8.0/ref/GameRouletteBackend.dll
+/Users/USER/Desktop/Projects/unlink/backend/obj/Debug/net8.0/GameRouletteBackend.sourcelink.json

@@ -14,6 +14,7 @@ using GameRouletteBackend.IAM.Infrastructure.Persistence.EFC.Repositories;
 using GameRouletteBackend.Shared.Domain.Repositories;
 using GameRouletteBackend.Shared.Infrastructure.Persistence.EFC.Configuration;
 using GameRouletteBackend.Shared.Infrastructure.Persistence.EFC.Repositories;
+using GameRouletteBackend.Shared.Infrastructure.Pipeline.Middleware.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -116,6 +117,9 @@ builder.Services.AddScoped<IAccountQueryService, AccountQueryService>();
 builder.Services.AddScoped<IUserCommandService, UserCommandService>();
 builder.Services.AddScoped<IUserQueryService, UserQueryService>();
 
+// IAM ACL Facades
+builder.Services.AddScoped<GameRouletteBackend.IAM.Interfaces.ACL.IUserBalanceFacade, GameRouletteBackend.IAM.Interfaces.ACL.UserBalanceFacade>();
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
@@ -127,6 +131,9 @@ using (var scope = app.Services.CreateScope())
 }
 
 // Configure the HTTP request pipeline.
+// Configurar el middleware de manejo de excepciones al principio del pipeline
+app.UseExceptionHandling();
+
 if (app.Environment.IsDevelopment() || app.Environment.IsStaging() || app.Environment.IsProduction())
 {
     app.UseSwagger();

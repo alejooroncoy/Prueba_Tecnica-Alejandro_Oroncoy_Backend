@@ -7,6 +7,6 @@ public static class SpinRouletteCommandFromResourceAssembler
 {
     public static SpinRouletteCommand ToCommandFromResource(SpinRouletteResource resource)
     {
-        return new SpinRouletteCommand(resource.GameId);
+        return new SpinRouletteCommand();
     }
 }
